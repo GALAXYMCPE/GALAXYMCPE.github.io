@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Work+Sans:300,400,700,900");
+* {
+  outline-width: 0;
+  font-family: "Montserra" !important;
+}
+
+body {
+  background: #121222;
+}
+
+#container {
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inviteContainer {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+#inviteContainer .acceptContainer {
+  padding: 45px 30px;
+  box-sizing: border-box;
+  width: 400px;
+  margin-left: -400px;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+#inviteContainer .acceptContainer.loadIn {
+  opacity: 1;
+  margin-left: 0;
+  transition: 0.5s ease;
+}
+#inviteContainer .acceptContainer:before {
+  content: "";
+  background-size: cover !important;
+  box-shadow: inset 0 0 0 3000px rgba(40, 43, 48, 0.75);
+  filter: blur(10px);
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -50px;
+  left: -50px;
+}
+
+form {
+  position: relative;
+  text-align: center;
+  height: 100%;
+}
+form h1{
+  margin: 0 0 15px 0;
+  font-family: "Work Sans" !important;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  left: -30px;
+  position: relative;
+  transition: 0.5s ease;
+}
+p{
+ color: white;
+}
+form h1.loadIn {
+  left: 0;
+  opacity: 1;
+}
+
+.logoContainer {
+  padding: 45px 35px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: scale(0, 0);
+}
+.logoContainer img {
+  width: 150px;
+  margin-bottom: -5px;
+  display: block;
+  position: relative;
+}
+.logoContainer img:first-child {
+  width: 150px;
+}
+.logoContainer .text {
+  padding: 25px 0 10px 0;
+  margin-top: -70px;
+  opacity: 0;
+}
+.logoContainer .text.loadIn {
+  margin-top: 0;
+  opacity: 1;
+  transition: 0.8s ease;
+}
+.logoContainer .logo {
+  position: relative;
+  top: -20px;
+  opacity: 0;
+}
+.logoContainer .logo.loadIn {
+  top: 0;
+  opacity: 1;
+  transition: 0.8s ease;
+}
+.logoContainer:before {
+  content: "";
+  background-size: cover !important;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150%;
+  height: 150%;
+  filter: blur(10px);
+  box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.8);
+}
+
+
+.acceptBtn {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border: 2px solid #595FA3;
+  color: #fff;
+  bottom: 0px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  transition: 0.2s ease;
+}
+.acceptBtn:hover {
+  background: #595FA3;
+}
+
